@@ -1,0 +1,3 @@
+default_model: "deepseek/deepseek-chat" 
+temperature: 0.2
+max_retries: 3
