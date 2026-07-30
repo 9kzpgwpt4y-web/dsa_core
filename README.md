@@ -54,3 +54,30 @@ cd dsa_core
 
 # 安装依赖项
 pip install fastapi uvicorn python-multipart
+
+### 2. 创建并激活虚拟环境
+
+```bash
+conda create -n qlib_env python=3.10
+conda activate qlib_env
+python -m venv qlib_env
+# Windows
+qlib_env\Scripts\activate
+# Mac/Linux
+source qlib_env/bin/activate
+
+### 3. 安装依赖
+```bash
+pip install -r requirements.txt
+#如果还没有 requirements.txt，可以先安装核心依赖：
+pip install fastapi uvicorn python-multipart websockets httpx
+
+### 4. 配置环境变量
+```bash
+# .env 示例
+LLM_API_KEY=your_api_key_here
+LLM_MODEL=gpt-4
+
+### 5. 一键启动项目
+```bash
+python run_dsa.py
